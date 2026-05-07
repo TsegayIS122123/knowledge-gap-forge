@@ -117,35 +117,6 @@ gantt
 
 ---
 
-## 🎯 The 5 Questions I Am Asking (Gaps in My Understanding)
-
-### Day 1: LoRA Mechanics (Week 11)
-> *"In my Week 11 training script (`training/run_simpo.py` lines 45-55), I set LoRA rank=16 and alpha=32. I understand lower rank means fewer parameters, but I cannot explain what the rank actually represents in the weight update matrix. What is the mathematical relationship between LoRA rank and the model's capacity to learn new patterns?"*
-
-**Grounded in:** Week 11 `training/run_simpo.py`
-
-### Day 2: LLM-as-Judge Biases (Weeks 2 + 11)
-> *"My Week 11 `scoring_evaluator.py` (lines 280-320) uses an LLM judge for tone_alignment. My Week 2 Automaton Auditor also used LLM judges (Prosecutor/Defense/Tech Lead). When I run the same output through different models, I get different scores. What measurable biases exist in LLM-as-judge systems (position, length, self-preference), and how can I detect them?"*
-
-**Grounded in:** Week 2 `src/nodes/judges.py` + Week 11 `scoring_evaluator.py`
-
-### Day 3: Bootstrap Confidence Intervals (Week 11)
-> *"My Week 11 ablation results (`ablations/run_ablations.py` lines 150-180) show Delta A = +16.4 with 95% CI [12.1, 20.7] and p=0.003 using paired bootstrap. I can run the code, but I cannot explain what the bootstrap distribution actually represents. Why is paired bootstrap appropriate for my held-out tasks?"*
-
-**Grounded in:** Week 11 `ablations/run_ablations.py`
-
-### Day 4: SimPO vs DPO (Week 11)
-> *"I chose SimPO for my Week 11 judge training because the paper said it's 'reference-free' and cheaper. But I cannot explain the actual gradient difference between DPO and SimPO. What does SimPO optimize that DPO does not? Under what conditions would DPO outperform SimPO?"*
-
-**Grounded in:** Week 11 `methodology_rationale.md` + `training/run_simpo.py`
-
-### Day 5: Contamination Detection Limits (Weeks 7 + 11)
-> *"My Week 11 `contamination_check.py` implements n-gram (8-gram), embedding similarity (0.85 threshold), and time-shift verification. My Week 7 Data Contract Enforcer also dealt with data quality. I understand these catch exact duplication, but I cannot explain what contamination they MISS. What is a realistic contamination scenario that would pass all three checks?"*
-
-**Grounded in:** Week 7 `contracts/runner.py` + Week 11 `contamination_check.py`
-
----
-
 ## 🔄 The Daily Paired Research Loop
 
 ```mermaid
@@ -233,73 +204,86 @@ knowledge-gap-forge/
 ├── portfolio_update.md            # 1-page improvement summary (final)
 └── README.md                      # This file
 ```
+---
+
+## 👥 My Daily Partners
+
+| Day | Topic | Partner |
+|-----|-------|---------|
+| **Day 1 (Tuesday)** | LoRA Mechanics | Eyobed Feleke |
+| **Day 2 (Wednesday)** | Agent & Tool-Use Internals | Kemeriya Major |
+| **Day 3 (Thursday)** | Training & Post-Training Mechanics | Bethel Yohannes |
+| **Day 4 (Friday)** | Evaluation & Statistics | TBD |
+| **Day 5 (Saturday)** | Production Patterns | TBD |
 
 ---
 
-## 📊 The 5 Blog Posts I Will Write
+## 🗺️ Weekly Topic Schedule (Actual)
 
-| Day | Topic | Week Grounding | Blog Title | Key Mechanism |
-|-----|-------|----------------|------------|---------------|
-| 1 | LoRA Mechanics | Week 11 | "LoRA Rank: What That Number Actually Does" | ΔW = BA, rank = bottleneck dimension |
-| 2 | LLM-as-Judge Biases | Weeks 2 + 11 | "Your Evaluator Has Hidden Biases" | Position bias, length bias, self-preference |
-| 3 | Bootstrap CIs | Week 11 | "What 95% Confidence Actually Means" | Paired bootstrap resampling distribution |
-| 4 | SimPO vs DPO | Week 11 | "Reference-Free Preference Optimization" | SimPO eliminates reference model |
-| 5 | Contamination Limits | Weeks 7 + 11 | "What Your Contamination Checks Miss" | Semantic drift, structural pattern leakage |
-
----
-
-## 🎯 The Four Properties of a Great Question
-
-Every question I ask is scored by peers and tutors on these criteria:
-
-| Property | Definition | My Day 1 Score |
-|----------|------------|----------------|
-| **Diagnostic** | Names a specific gap whose closure changes how I do FDE work | ✅ 5/5 |
-| **Grounded** | Connects to a specific artifact I shipped (from any week) | ✅ 5/5 |
-| **Generalizable** | Helps many FDEs, not just me | ✅ 4/5 |
-| **Resolvable** | Colleague can write 600-1000 word explainer | ✅ 5/5 |
+| Day | Topic | Partner | My Role | Status |
+|-----|-------|---------|---------|--------|
+| **Day 1 (Tue)** | LoRA Mechanics | Eyobed Feleke | Asker & Explainer | ✅ Complete |
+| **Day 2 (Wed)** | Agent & Tool-Use Internals | Kemeriya Major | Asker & Explainer | ✅ Complete |
+| **Day 3 (Thu)** | Training & Post-Training Mechanics | Bethel Yohannes | Asker & Explainer | 🔄 In Progress |
+| **Day 4 (Fri)** | Evaluation & Statistics | TBD | TBD | ⏳ Planned |
+| **Day 5 (Sat)** | Production Patterns | TBD | TBD | ⏳ Planned |
 
 ---
 
-## 📈 Progress Tracker
+## 🎯 The Questions I Asked 
 
-```mermaid
-pie title Week 12 Completion
-    "Day 1 Complete" : 20
-    "Day 2 In Progress" : 10
-    "Days 3-5 Planned" : 70
-```
+### Day 1 (Monday) - LoRA Mechanics
+**Partner:** Eyobed Feleke
 
-| Day | Topic | Week | Question | Explainer | Sign-off | Grounding |
-|-----|-------|------|----------|-----------|----------|-----------|
-| 1 | LoRA Mechanics | 11 | ✅ | ✅ | ✅ | ✅ |
-| 2 | LLM-as-Judge Biases | 2+11 | 🔄 | 🔄 | ⏳ | ⏳ |
-| 3 | Bootstrap CIs | 11 | ⏳ | ⏳ | ⏳ | ⏳ |
-| 4 | SimPO vs DPO | 11 | ⏳ | ⏳ | ⏳ | ⏳ |
-| 5 | Contamination Limits | 7+11 | ⏳ | ⏳ | ⏳ | ⏳ |
+> *"In my Week 11 training script (`training/run_simpo.py` lines 45-55), I set LoRA rank=16 and alpha=32. I cannot explain what the rank actually represents in the weight update matrix. Does `tool_use` work by logit masking (invalid tokens have probability set to zero), or is it just a well-crafted prompt? What is the difference at the token probability level?"*
+
+**Partner's question to me:** *"What is happening at the token level in each approach? Would using tool_use with a schema that only defines intent have prevented the dual-control stalling failure?"*
+
+### Day 2 (Wednesday) - Agent & Tool-Use Internals
+**Partner:** Kemeriya Major
+
+> *"In my Week 10 Conversion Engine (`agent/email/reply_handler.py`), I prompt Claude to return JSON with `suggested_next_action`. I never used `tool_use`. My gap: I cannot explain what is happening at the token level when: (1) free-text JSON generation, (2) tool_use API. Would using `tool_use` have prevented the stalling failure?"*
+
+**Partner's question to me:** *"Why does policy.py ignore suggested_next_action? What's the token-level difference between your free-text JSON and tool_use?"*
+
+### Day 3 (Thursday) - Training & Post-Training Mechanics
+**Partner:** Bethel Yohannes
+
+> *"In my Week 11 training, I chose SimPO over DPO because the paper said it's 'reference-free' and cheaper. But I cannot explain the actual gradient difference between DPO and SimPO. What does SimPO optimize that DPO does not? Under what conditions would DPO outperform SimPO?"*
+
+**Partner's question to me:** *[To be filled after morning call]*
+
+### Day 4 (Friday) - Evaluation & Statistics
+**Partner:** TBD
+
+> *[Question to be formulated based on daily topic]*
+
+### Day 5 (Saturday) - Production Patterns
+**Partner:** TBD
+
+> *[Question to be formulated based on daily topic]*
+
+
+
+| Day | Topic | Partner | Question | Explainer | Sign-off | Grounding |
+|-----|-------|---------|----------|-----------|----------|-----------|
+| 1 | LoRA Mechanics | Eyobed Feleke | ✅ | ✅ | ✅ | ✅ |
+| 2 | Tool-Use Internals | Kemeriya Major | ✅ | ✅ | ✅ | ✅ |
+| 3 | Training Mechanics | Bethel Yohannes | 🔄 | 🔄 | ⏳ | ⏳ |
+| 4 | Evaluation Stats | TBD | ⏳ | ⏳ | ⏳ | ⏳ |
+| 5 | Production Patterns | TBD | ⏳ | ⏳ | ⏳ | ⏳ |
 
 ---
 
-## 📚 Canonical Reading List (To Be Built)
+## 🔗 Public Artifacts 
 
-By end of Week 12, I will have contributed an annotated list of the most valuable papers and tools for FDEs, drawn from my 11-week journey:
-
-| Category | Paper/Tool | Week Used | Why It Matters |
-|----------|------------|-----------|----------------|
-| **PEFT** | LoRA (Hu et al., ICLR 2022) | Week 11 | Foundation of efficient fine-tuning |
-| **PEFT** | Intrinsic Dimensionality (Aghajanyan et al., ACL 2021) | Week 11 | Explains why LoRA works |
-| **Evaluation** | LLM-as-a-Judge Survey (Gu et al., 2025) | Weeks 2, 11 | Catalog of biases |
-| **Evaluation** | Preference Leakage (Li et al., 2025) | Week 11 | Cross-family judging requirement |
-| **Statistics** | Bootstrap Methods (Efron, 1979) | Week 11 | Confidence intervals for benchmarks |
-| **Optimization** | SimPO (Meng et al., NeurIPS 2024) | Week 11 | Reference-free preference optimization |
-| **Data** | Contamination Survey (Chen et al., EMNLP 2025) | Week 11 | Limits of n-gram detection |
-| **Agents** | LangGraph Documentation | Weeks 2, 4, 8-9 | Stateful multi-agent orchestration |
-| **Event Sourcing** | Event Sourcing (Greg Young) | Weeks 5-6 | Immutable audit trails |
-| **Data Contracts** | Bitol Open Data Contract Standard | Week 7 | Schema validation at scale |
-| **Tool** | PEFT Library (HuggingFace) | Week 11 | LoRA implementation |
-| **Tool** | Unsloth | Week 11 | Fast LoRA training |
-| **Tool** | tree-sitter | Week 4 | Multi-language AST parsing |
-| **Tool** | sqlglot | Week 4 | SQL lineage extraction |
+| Day | Blog Post URL | Tweet Thread URL | Status |
+|-----|---------------|------------------|--------|
+| 1 | [To be published] | [To be published] | ⏳ Pending |
+| 2 | [To be published] | [To be published] | ⏳ Pending |
+| 3 | [To be published] | [To be published] | ⏳ Pending |
+| 4 | [To be published] | [To be published] | ⏳ Pending |
+| 5 | [To be published] | [To be published] | ⏳ Pending |
 
 ---
 
