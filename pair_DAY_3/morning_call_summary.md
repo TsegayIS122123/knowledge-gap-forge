@@ -1,34 +1,26 @@
-
-# Morning Call Summary - Day 3
+# Evening Call Summary - Day 3
 
 **Date:** May 7, 2026
-**Partners:** Tsegay (Asker) + Bethel Yohannes (Explainer)
-**Duration:** 25 minutes
+**Partners:** Tsegay (Explainer) + Bethel Yohannes (Asker)
+**Duration:** 30 minutes
 
-## My Original Draft Question (paraphrased)
+## Feedback I Received
 
-"Why is SimPO better than DPO? What's the difference?"
+Bethel said my blog:
 
-## My Partner's Interrogation
+**Landed well:**
+- The diagnostic split (reasoning vs style tasks) directly answered her question
+- The code example for detection was actionable
+- The counterfactual testing suggestion added value
 
-Bethel asked:
-- "Are you asking about the math or the practical results?"
-- "You mention 'gradient difference' - can you write out the actual loss functions you want compared?"
-- "What specific line in your training script would change if you understood this?"
+**Needed revision:**
+- "Show the actual numbers from your held-out evaluation"
 
-## How I Sharpened the Question
+## Revisions I Made
 
-My partner helped me realize I was asking a comparison question without specifying what dimension I cared about. I narrowed focus to **gradient mechanics** because that's what determines memory and convergence.
+1. Added the actual delta values (+14.2 reasoning, +6.6 style)
+2. Clarified that I haven't run counterfactual tests yet (honest gap)
 
-I also added a concrete deliverable: "I will update my methodology_rationale.md with the actual gradient explanation."
+## Partner's Sign-off
 
-## Final Question (as committed)
-
-See `question.md` - focuses on:
-- What SimPO optimizes at the gradient level
-- When DPO outperforms SimPO
-- The reference model's mechanistic role
-
-## Partner's Attestation
-
-Bethel confirmed: "The question is unambiguous. I understand what you're asking."
+Bethel confirmed: "Gap closed. I now understand how to detect whether a model is learning reasoning or just surface compliance."

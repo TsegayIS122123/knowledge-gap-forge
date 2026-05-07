@@ -1,3 +1,4 @@
+
 # Grounding Commit - Day 3
 
 **Asker:** Tsegay
@@ -7,10 +8,10 @@
 ## What I Will Change
 
 **Before (shallow):**
-> "I chose SimPO because it's reference-free and cheaper."
+> "I chose SimPO over DPO because it's reference-free and cheaper."
 
 **After (explained):**
-> "SimPO eliminates the reference model used in DPO, optimizing the log-probability gap between chosen and rejected responses directly. This reduces memory footprint (no second model) and can converge faster. The decision rule: SimPO is preferred when starting from a weaker base model; DPO may be more stable when starting from a well-aligned SFT model."
+> "SimPO eliminates the reference model used in DPO, using the policy's own length-normalized log-probabilities as the implicit reward. This reduces memory footprint (no second model) and avoids gradient dependence on a drifting reference. The trade-off: with a well-initialized SFT model, the gain is modest (+1.5% in my case). SimPO's advantage grows when fine-tuning from a weaker base, where DPO's reference model would otherwise impose a stronger constraint."
 
 ## How to Verify
 

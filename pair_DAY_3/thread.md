@@ -1,43 +1,50 @@
+
+
+
+
 **Tweet 1/6**
 
-DPO vs SimPO: What's the actual gradient difference? 🧵
+Does your fine-tuned model actually reason or just learn style? 🧵
 
-My partner asked me this after reading both papers and finding only a +1.5% improvement with SimPO, not the dramatic gap claimed.
-
-→ Let me explain the mechanism.
+My partner Bethel asked me this about my Week 11 benchmark. Her concern: my training data pairs come from style violations. The model might just learn to avoid banned phrases.
 
 **Tweet 2/6**
 
-DPO loss: -log σ(β * log(πθ(yw|x)/πref(yw|x)) - β * log(πθ(yl|x)/πref(yl|x)))
+The detection method: Split held-out tasks by what they test.
 
-It uses a REFERENCE model (πref) to compute a reward margin. The reference model is frozen.
+Reasoning tasks: signal conflict (hiring surge + burnout → delay)
+Style tasks: tone alignment only
+
+Compare improvement per category.
 
 **Tweet 3/6**
 
-SimPO loss: -log σ(β * log πθ(yw|x) - β * log πθ(yl|x) - γ)
+My diagnostic results:
 
-No reference model. The reward is the policy's OWN log-probability. γ is a margin term.
+Reasoning tasks: +14.2 point improvement
+Style tasks: +6.6 point improvement
+
+The model improved MORE on reasoning than on style.
 
 **Tweet 4/6**
 
-What changes at the gradient level?
+This suggests genuine reasoning was learned, not just surface compliance. If it had learned only style, style improvement would dominate.
 
-DPO: Gradients push the policy AWAY from the reference model's preferences while moving TOWARD the chosen response.
-
-SimPO: Gradients directly maximize the log-probability gap between chosen and rejected. No reference = less memory, potentially faster convergence.
+But there's a risk: spurious correlation. Does "burnout" trigger "delay" without understanding why?
 
 **Tweet 5/6**
 
-Why did my partner see only +1.5% improvement?
+Counterfactual testing would detect this. Swap "burnout" with "aggressive hiring" in the prompt. Does the model still output "delay"? If yes, it's spurious.
 
-The gap closes when the SFT model is already well-aligned. The reference model in DPO adds little value when starting from a good base. SimPO's advantage grows when you need to train from a weaker base.
+I haven't run this yet - that's my next gap.
 
 **Tweet 6/6**
 
-Decision rule:
-- Starting from weak base → SimPO (reference-free helps)
-- Starting from strong base → either works, DPO may be more stable
+Bottom line: 
+- Run diagnostic split (reasoning vs style tasks)
+- Compare deltas
+- Test counterfactuals
 
-Blog with full equations + code: [link]
+Blog with code: [link]
 
-#DPO #SimPO #RLHF #PreferenceTuning #LLM
+#LLM #FineTuning #Evaluation #Reasoning #Alignment
