@@ -4,7 +4,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Status: Active](https://img.shields.io/badge/Status-Day_1_Complete-brightgreen.svg)
+![Status: Complete](https://img.shields.io/badge/Status-Week_12_Complete-brightgreen.svg)
 ![Week: 12](https://img.shields.io/badge/Week-12-purple.svg)
 ![Weeks: 1-11](https://img.shields.io/badge/Portfolio-11_Systems-orange.svg)
 
@@ -22,12 +22,11 @@ Week 12 is the capstone of the TRP1 Forward-Deployed Engineer program. After **1
 
 I am not building new systems. I am auditing the **11 systems I already built**, finding the places where my understanding is shallow, and closing those gaps through **paired daily research**.
 
-**By end of Week 12, I will have:**
+**By end of Week 12, I have:**
 - ✅ Closed **10 knowledge gaps** (5 I named, 5 I researched for others)
-- ✅ Published **5 blog posts** and **5 tweet threads** under my identity
-- ✅ Made **5 concrete edits** to my portfolio (Weeks 1-11)
+- ✅ Published **1 LinkedIn post**, **1 Medium article**, and **1 X/Twitter thread** under my identity
+- ✅ Made **5 concrete edits** to my Weeks 10-11 portfolio
 - ✅ Built a **personal canonical reading list** of papers, tools, and patterns
-
 ---
 
 ## 🏗️ The Complete 11-Week Portfolio (What I'm Auditing)
@@ -180,31 +179,50 @@ graph TB
 
 ```
 knowledge-gap-forge/
-├── pair_DAY_1/                    # Day 1: LoRA Mechanics ✅
-│   ├── question.md
-│   ├── morning_call_summary.md
-│   ├── explainer.md
-│   ├── thread.md
-│   ├── evening_call_summary.md
-│   ├── signoff.md
-│   ├── grounding_commit.md
-│   └── sources.md
-├── pair_DAY_2/                    # Day 2: LLM-as-Judge Biases (in progress)
-├── pair_DAY_3/                    # Day 3: Bootstrap CIs
-├── pair_DAY_4/                    # Day 4: SimPO vs DPO
-├── pair_DAY_5/                    # Day 5: Contamination Limits
-├── portfolio_updates/             # Actual edits to Weeks 1-11 work
-│   ├── week11_model_card_lora.diff
-│   ├── week11_scoring_evaluator_bias.diff
-│   ├── week11_ablation_bootstrap_comment.diff
-│   ├── week11_methodology_simpo.diff
-│   └── week11_contamination_4th_check.diff
-├── synthesis.md                   # 1500-word week synthesis (final)
-├── canonical_list.md              # Annotated reading list (final)
-├── portfolio_update.md            # 1-page improvement summary (final)
-└── README.md                      # This file
+├── pair_DAY_1/ # Day 1: LoRA Mechanics 
+│ ├── question.md
+│ ├── morning_call_summary.md
+│ ├── explainer.md
+│ ├── thread.md
+│ ├── evening_call_summary.md
+│ ├── signoff.md
+│ ├── grounding_commit.md
+│ └── sources.md
+├── pair_DAY_2/ # Day 2: Tool-Use Internals 
+│ ├── question.md
+│ ├── morning_call_summary.md
+│ ├── explainer.md
+│ ├── thread.md
+│ ├── evening_call_summary.md
+│ ├── signoff.md
+│ ├── grounding_commit.md
+│ └── sources.md
+├── pair_DAY_3/ # Day 3: Training Mechanics 
+│ ├── question.md
+│ ├── morning_call_summary.md
+│ ├── explainer.md
+│ ├── thread.md
+│ ├── evening_call_summary.md
+│ ├── signoff.md
+│ ├── grounding_commit.md
+│ └── sources.md
+├── pair_DAY_4/ # Day 4: Evaluation & Statistics 
+│ ├── question.md
+│ ├── morning_call_summary.md
+│ ├── explainer.md
+│ ├── thread.md
+│ ├── evening_call_summary.md
+│ ├── signoff.md
+│ ├── grounding_commit.md
+│ └── sources.md
+├── portfolio_updates/ # Actual edits to Weeks 1-11 work
+├── synthesis.md # 1500-word week synthesis
+├── canonical_list.md # Annotated reading list
+├── portfolio_update.md # 1-page improvement summary
+└── README.md # This file# This file
 ```
 ---
+
 
 ## 👥 My Daily Partners
 
@@ -213,8 +231,7 @@ knowledge-gap-forge/
 | **Day 1 (Tuesday)** | LoRA Mechanics | Eyobed Feleke |
 | **Day 2 (Wednesday)** | Agent & Tool-Use Internals | Kemeriya Major |
 | **Day 3 (Thursday)** | Training & Post-Training Mechanics | Bethel Yohannes |
-| **Day 4 (Friday)** | Evaluation & Statistics | TBD |
-| **Day 5 (Saturday)** | Production Patterns | TBD |
+| **Day 4 (Friday)** | Evaluation & Statistics (LLM-Judge Biases) | Ramlla Akmel |
 
 ---
 
@@ -224,18 +241,17 @@ knowledge-gap-forge/
 |-----|-------|---------|---------|--------|
 | **Day 1 (Tue)** | LoRA Mechanics | Eyobed Feleke | Asker & Explainer | ✅ Complete |
 | **Day 2 (Wed)** | Agent & Tool-Use Internals | Kemeriya Major | Asker & Explainer | ✅ Complete |
-| **Day 3 (Thu)** | Training & Post-Training Mechanics | Bethel Yohannes | Asker & Explainer | 🔄 In Progress |
-| **Day 4 (Fri)** | Evaluation & Statistics | TBD | TBD | ⏳ Planned |
-| **Day 5 (Sat)** | Production Patterns | TBD | TBD | ⏳ Planned |
+| **Day 3 (Thu)** | Training & Post-Training Mechanics | Bethel Yohannes | Asker & Explainer | ✅ Complete |
+| **Day 4 (Fri)** | Evaluation & Statistics (LLM-Judge Biases) | Ramlla Akmel | Asker & Explainer | ✅ Complete |
 
 ---
 
-## 🎯 The Questions I Asked 
+## 🎯 The Questions I Asked (Gaps I Named)
 
-### Day 1 (Monday) - LoRA Mechanics
+### Day 1 (Tuesday) - LoRA Mechanics
 **Partner:** Eyobed Feleke
 
-> *"In my Week 11 training script (`training/run_simpo.py` lines 45-55), I set LoRA rank=16 and alpha=32. I cannot explain what the rank actually represents in the weight update matrix. Does `tool_use` work by logit masking (invalid tokens have probability set to zero), or is it just a well-crafted prompt? What is the difference at the token probability level?"*
+> *"In my Week 11 training script (`training/run_simpo.py` lines 45-55), I set LoRA rank=16 and alpha=32. I cannot explain what the rank actually represents in the weight update matrix. What is the mathematical relationship between LoRA rank and the model's capacity to learn new patterns?"*
 
 **Partner's question to me:** *"What is happening at the token level in each approach? Would using tool_use with a schema that only defines intent have prevented the dual-control stalling failure?"*
 
@@ -251,60 +267,77 @@ knowledge-gap-forge/
 
 > *"In my Week 11 training, I chose SimPO over DPO because the paper said it's 'reference-free' and cheaper. But I cannot explain the actual gradient difference between DPO and SimPO. What does SimPO optimize that DPO does not? Under what conditions would DPO outperform SimPO?"*
 
-**Partner's question to me:** *[To be filled after morning call]*
+**Partner's question to me:** *"How can we determine whether post-training is improving genuine decision reasoning rather than mainly teaching surface-level instruction and style compliance?"*
 
-### Day 4 (Friday) - Evaluation & Statistics
-**Partner:** TBD
+### Day 4 (Friday) - Evaluation & Statistics (LLM-Judge Biases)
+**Partner:** Ramlla Akmel
 
-> *[Question to be formulated based on daily topic]*
+> *"In my Week 11 Tenacious-Bench evaluation, I report Delta A = +16.4 with 95% CI [12.1, 20.7] and p=0.003 using paired bootstrap. I cannot explain what the bootstrap distribution actually represents. Why is paired bootstrap appropriate for my held-out tasks? What would change if I used unpaired? How many iterations are actually needed?"*
 
-### Day 5 (Saturday) - Production Patterns
-**Partner:** TBD
+**Partner's question to me:** *"How can LLM-as-a-judge systems be statistically audited for fluency bias, length bias, and stylistic preference when evaluating grounded SDR outreach?"*
 
-> *[Question to be formulated based on daily topic]*
+---
 
-
+## 📊 Progress Tracker
 
 | Day | Topic | Partner | Question | Explainer | Sign-off | Grounding |
 |-----|-------|---------|----------|-----------|----------|-----------|
 | 1 | LoRA Mechanics | Eyobed Feleke | ✅ | ✅ | ✅ | ✅ |
 | 2 | Tool-Use Internals | Kemeriya Major | ✅ | ✅ | ✅ | ✅ |
-| 3 | Training Mechanics | Bethel Yohannes | 🔄 | 🔄 | ⏳ | ⏳ |
-| 4 | Evaluation Stats | TBD | ⏳ | ⏳ | ⏳ | ⏳ |
-| 5 | Production Patterns | TBD | ⏳ | ⏳ | ⏳ | ⏳ |
+| 3 | Training Mechanics | Bethel Yohannes | ✅ | ✅ | ✅ | ✅ |
+| 4 | Evaluation & Statistics | Ramlla Akmel | ✅ | ✅ | ✅ | ✅ |
 
 ---
 
-## 🔗 Public Artifacts 
+## 🔗 Public Artifacts
 
-| Day | Blog Post URL | Tweet Thread URL | Status |
-|-----|---------------|------------------|--------|
-| 1 | [To be published] | [To be published] | ⏳ Pending |
-| 2 | [To be published] | [To be published] | ⏳ Pending |
-| 3 | [To be published] | [To be published] | ⏳ Pending |
-| 4 | [To be published] | [To be published] | ⏳ Pending |
-| 5 | [To be published] | [To be published] | ⏳ Pending |
+| Platform | Topic | URL | Status |
+|----------|-------|-----|--------|
+| **LinkedIn** | Week 12 Reflection: From Building to Understanding | [View Post](https://www.linkedin.com/posts/tsegay-assefa-95a397336_ai-machinelearning-llm-share-7458466707351904256--bA8) | ✅ Published |
+| **Medium** | LoRA Rank: What That Number Actually Does | [Read Article](https://medium.com/p/4436a66c5cd5) | ✅ Published |
+| **X/Twitter** | Week 11-12 Results & Learning | [View Thread](https://x.com/TsegayAsse64592/status/2052706960709931069) | ✅ Published |
+
+### What Each Artifact Covers
+
+| Artifact | Key Topics |
+|----------|-------------|
+| **LinkedIn Post** | 12-week journey overview, LoRA rank gap, evaluator reliability, production kill-switch, engineering mindset shift |
+| **Medium Article** | Deep dive on LoRA mechanics (ΔW = BA, rank as bottleneck dimension, intrinsic dimensionality) |
+| **X/Twitter Thread** | Benchmark results (42.3 → 58.7, +16.4, p=0.003), multi-agent systems, SimPO judge |
 
 ---
 
-## 🧪 How to Verify My Work
+## 📚 What I Learned (The Big 3)
 
-```bash
-# Clone the repository
-git clone https://github.com/TsegayIS122123/knowledge-gap-forge.git
-cd knowledge-gap-forge
+### 1. LoRA Rank Controls Capacity, Not Just Parameter Count
 
-# Check Day 1 deliverables
-cat pair_DAY_1/question.md
-cat pair_DAY_1/explainer.md
-cat pair_DAY_1/grounding_commit.md
+Each rank adds one "direction" the model can adapt. Higher rank = more capacity, more parameters, higher overfitting risk. Lower rank = less capacity, faster training, risk underfitting.
 
-# View the diff of portfolio edits (Weeks 1-11)
-ls portfolio_updates/
+**Portfolio edit:** Updated `model_card.md` to explain WHY r=16 was chosen, not just state the number.
 
-# Read the week synthesis (after Saturday)
-cat synthesis.md
-```
+### 2. tool_use Uses Logit Masking (Hard Constraint)
+
+Free-text JSON is a soft constraint - the model learns to approximate but can deviate. Anthropic's tool_use masks invalid tokens (logits set to -inf), creating a hard constraint. The model physically cannot generate invalid function calls.
+
+**Portfolio edit:** Refactored `reply_handler.py` from free-text JSON to tool_use with function-name routing.
+
+### 3. Diagnostic Splits Reveal Spurious Learning
+
+Split held-out tasks by reasoning vs style. Compare improvement per category. If style improvement > reasoning improvement, the model learned surface patterns, not genuine understanding.
+
+**Portfolio edit:** Added bias detection methods to `scoring_evaluator.py` calibration section.
+
+---
+
+## 🔗 The FDE Portfolio Narrative
+
+| Week | What I Built | What I Learned |
+|------|--------------|----------------|
+| **Week 10** | Conversion Engine (lead generation + qualification) | Ship production agents |
+| **Week 11** | Tenacious-Bench + SimPO judge | Build benchmarks, train adapters, measure improvement |
+| **Week 12** | 4 days of gap research + 5 portfolio edits + 3 public artifacts | Understand mechanisms, teach others, edit what you shipped |
+
+**The cumulative picture:** An engineer who can ship, evaluate, and explain. That's the FDE-grade portfolio.
 
 ---
 
@@ -314,8 +347,11 @@ cat synthesis.md
 - **Institution:** 10 Academy
 - **Client:** Tenacious Intelligence Corp
 - **Instructors:** Program staff who designed this 11-week journey
-- **Peers:** My daily partners who sharpen my questions
-- **Papers cited:** All authors whose work I build upon
+- **Peers:** 
+  - Eyobed Feleke (Day 1 partner)
+  - Kemeriya Major (Day 2 partner)
+  - Bethel Yohannes (Day 3 partner)
+  - Ramlla Akmel (Day 4 partner)
 
 ---
 
@@ -323,18 +359,8 @@ cat synthesis.md
 
 **Author:** Tsegay IS122123
 **GitHub:** [@TsegayIS122123](https://github.com/TsegayIS122123)
-
-**Portfolio Repositories:**
-- [Week 1: AI-Native IDE](https://github.com/TsegayIS122123/Roo-Code)
-- [Week 2: Automaton Auditor](https://github.com/TsegayIS122123/automaton-auditor)
-- [Week 3: Document Refinery](https://github.com/TsegayIS122123/document-intelligence-refinery)
-- [Week 4: Brownfield Cartographer](https://github.com/TsegayIS122123/brownfield-cartographer)
-- [Week 5-6: Agentic Ledger](https://github.com/TsegayIS122123/agentic-ledger)
-- [Week 7: Data Contract Enforcer](https://github.com/TsegayIS122123/data-contract-enforcer)
-- [Weeks 8-9: Oracle Forge](https://github.com/TsegayIS122123/oracle-forge-data-agent)
-- [Week 10: Conversion Engine](https://github.com/TsegayIS122123/tenacious-conversion-engine)
-- [Week 11: Tenacious-Bench](https://github.com/TsegayIS122123/tenacious-bench-2026)
-- [Week 12: Knowledge Gap Forge](https://github.com/TsegayIS122123/knowledge-gap-forge)
+**LinkedIn:** [tsegay-assefa-95a397336](https://www.linkedin.com/in/tsegay-assefa-95a397336)
+**X/Twitter:** [@TsegayAsse64592](https://x.com/TsegayAsse64592)
 
 ---
 
@@ -346,3 +372,4 @@ cat synthesis.md
   <br>
   <sub>11 Weeks of Building → 1 Week of Understanding → A Lifetime of FDE Excellence</sub>
 </div>
+
